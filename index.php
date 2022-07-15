@@ -12,7 +12,7 @@ $rs_Status = $link->query($str_Status);
 $strSQL = "SELECT * FROM Download order by id_download";
 $objQuery = $link->query($strSQL) or die ("Error Query [".$strSQL."]");
 
-mysql_select_db($db);
+
 $result = $link->query("SELECT * FROM member WHERE UserID = '".$_SESSION['UserID']."' ") or die ("Err Can not to result");
 $dbarr = mysqli_fetch_array($result);
 ?>
@@ -123,10 +123,10 @@ text-align: center;
 <? //ทำงานหน้า  ?login=0
 if ($_POST["button"] == "เข้าสู่ระบบ")
 {
-$strSQL = "SELECT * FROM member WHERE Username = '".mysql_real_escape_string($_POST['username'])."' 
-	and Password = '".mysql_real_escape_string($_POST['password'])."'";
-	$objQuery = mysql_query($strSQL);
-	$objResult = mysql_fetch_array($objQuery);
+$strSQL = "SELECT * FROM member WHERE Username = '".mysqli_real_escape_string($_POST['username'])."' 
+	and Password = '".mysqli_real_escape_string($_POST['password'])."'";
+	$objQuery = $link->query($strSQL);
+	$objResult = mysqli_fetch_array($objQuery);
 	if(!$objResult)
 	{
 	 echo '<div class="alert alert-error" align="center"><b class="icon-remove icon-white"></b> ชื่อผู้ใช้หรือรหัสผิด</div>';
@@ -141,12 +141,12 @@ $strSQL = "SELECT * FROM member WHERE Username = '".mysql_real_escape_string($_P
 			session_write_close();
 						
 			$strSQL2 = "SELECT * FROM member WHERE UserID = '".$_SESSION['UserID']."' ";
-			$objQuery2 = mysql_query($strSQL2);
-			$objResult2 = mysql_fetch_array($objQuery2);
+			$objQuery2 = $link->query($strSQL2);
+			$objResult2 = mysqli_fetch_array($objQuery2);
 			
 			$_SESSION["UserID"] = $objResult["UserID"];			
 	}
-	mysql_close();
+	mysqli_close();
 ?>
 
 <? } ?>
@@ -527,8 +527,8 @@ $Bt = $objResult["Programe"];
 $Point = $objResult["Point"];
 $Day = $objResult["Day"];
 
-$resultq = mysql_query("select * from BuyItem where Programe='".$Bt."'") or die ("Err Can not to result");
-$objResult2 = mysql_fetch_array($resultq);
+$resultq = $link->query("select * from BuyItem where Programe='".$Bt."'") or die ("Err Can not to result");
+$objResult2 = mysqli_fetch_array($resultq);
 
 if($objResult['Status'] == "Online")
 {
