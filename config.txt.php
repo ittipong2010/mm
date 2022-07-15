@@ -47,7 +47,7 @@
 
 			$name = $row["$yourfield"];
 
-			echo "Name: ".$Username."br/>";
+			echo "Name: ".$name."br/>";
 
 		}
 
