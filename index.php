@@ -1,21 +1,20 @@
-﻿﻿<?php
+﻿<?php
 @session_start();
 include("class.php");
 include("time.php");
 include("config.txt.php");
-$mysqli->select_db("webbot");
 $str_sql = "Select * From history WHERE UserID = '".$_SESSION['UserID']."'";
-$rs_student = mysql_query($str_sql);
+$rs_student = $link->query($str_sql);
 	
 $str_Status = "Select * From status";
-$rs_Status = mysql_query($str_Status);
+$rs_Status = $link->query($str_Status);
 
 $strSQL = "SELECT * FROM Download order by id_download";
-$objQuery = mysql_query($strSQL) or die ("Error Query [".$strSQL."]");
+$objQuery = $link->query($strSQL) or die ("Error Query [".$strSQL."]");
 
-$mysqli->select_db("webbot");
-$result = mysql_query("SELECT * FROM member WHERE UserID = '".$_SESSION['UserID']."' ") or die ("Err Can not to result");
-$dbarr = mysql_fetch_array($result);
+mysql_select_db($db);
+$result = $link->query("SELECT * FROM member WHERE UserID = '".$_SESSION['UserID']."' ") or die ("Err Can not to result");
+$dbarr = mysqli_fetch_array($result);
 ?>
 <?php
 
