@@ -9,7 +9,7 @@ $config = array(
 'name'=>"Exp-Pro"
 );
 
-$cn =mysqli_connect($config["host"],$config["user"],$config["pass"]);
+$cn = mysqli_connect($config["host"],$config["user"],$config["pass"]);
 $db = mysqli_select_db($config["db"]);
 @mysqli_query("SET NAMES UTF8");
 if(!$cn&&!$db){die(mysqli_error());}
