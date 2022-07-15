@@ -1,4 +1,4 @@
-?php
+<?php
         $hostname="localhost";
 	$username="webbot";
 	$password="u25v!7Ns0";
