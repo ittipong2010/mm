@@ -17,7 +17,7 @@
 
 	$dbname="webbot";
 
-	$usertable="SET member UTF8";
+	$usertable="member";
 
 	$yourfield = "Username";
 
