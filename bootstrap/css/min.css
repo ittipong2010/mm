@@ -1,0 +1,358 @@
+body {
+	background-color: transparent;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000, endColorstr=#00000000);
+}
+
+header {
+	margin-bottom: 10px;
+}
+
+.loading {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	background-image: url("../img/loading.gif");
+	background-position: center center;
+	background-repeat: no-repeat;
+	top: 40%;
+	left: 45%;
+	z-index: 9999;
+}
+
+.overlay {
+	background-color: #000000;
+	opacity: 0.5;
+	filter: alpha(opacity = 50);
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	position:absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.alphaBg {
+	background: rgba(0, 0, 0, 0.8);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000, endColorstr=#7F000000);
+}
+
+.bg {
+	position: fixed; 
+	top: -50%; 
+	left: -50%; 
+	width: 200%; 
+	height: 200%;
+	z-index: -9999;
+}
+
+.bg img {
+	position: absolute;
+	top: -60px;
+	left: 1px;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	min-width: 50%;
+	min-height: 50%;
+	opacity: 0.9;
+	filter: alpha(opacity = 90);
+}
+
+.well {
+	background-color: transparent;
+	background: rgba(19, 21, 23, 0.95); 
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#EF131517, endColorstr=#EF131517);
+}
+
+.modal-footer {
+	text-align: center;
+}
+
+.carousel-inner .item img {
+	width: 450px;
+	height: 200px;
+}
+
+.loginAlert .alert {
+	font-size: 12px;
+	padding: 5px 5px 5px 5px;
+	margin-bottom: 5px;
+}
+
+.messageboxAlert .alert {
+	font-size: 12px;
+	text-align: center;
+	width: 60%;
+	margin: 0 auto 20px;
+}
+
+.contentAlert .alert {
+	font-size: 12px;
+	text-align: center;
+	width: 80%;
+	margin: 0 auto 10px;
+}
+
+.table, .table th, .table td {
+	border-color: #999;
+}
+
+.table {
+	margin-bottom: 5px;
+}
+
+.container {
+	margin-top: 10px;
+}
+
+.loginForm {
+	margin-bottom: 0px;
+}
+
+.loginForm label {
+	font-size: 12px;
+}
+
+.loginForm input {
+	font-size: 12px;
+	height: 15px;
+}
+
+.programStatus {
+	font-size: 10px;
+}
+
+.programStatus .tProgram {
+	width: 50%;
+}
+
+.programStatus .tVersion {
+	width: 25%;
+}
+
+.programStatus .tStatus {
+	width: 25%;
+}
+
+.programStatus th, .programStatus td {
+   text-align: center;   
+}
+
+.programStatus span {
+	font-size: 10px;
+	width: 80%;
+	font-weight: normal;
+}
+
+.newsAlert {
+	font-size: 12px;
+	padding-right: 10px;
+	margin-bottom: 15px;
+}
+
+.updateList {
+	font-size: 11px;
+}
+
+.updateList .tDate {
+	text-align: center;
+	width: 20%;
+}
+
+.updateList .tDetail {
+	text-align: center;
+	width: 80%;
+}
+
+.updateList tr td:first-child {
+	text-align: center;
+}
+
+.updateList span {
+	font-size: 10px;
+	margin-right: 5px;
+}
+
+.tmTable {
+	font-size: 11px;
+	width: 50%;
+	margin: 0 auto 10px;
+}
+
+.tmTable th, .tmTable td {
+   text-align: center;   
+}
+
+.topupForm {
+	width: 80%;
+	text-align: center;
+	margin: 0 auto 10px;
+}
+
+.tmPassword {
+	text-align: center;
+}
+
+.programAnchorLink {
+	font-size: 12px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.programTable {
+	font-size: 11px;
+	width: 100%;
+	margin: 0 auto 15px;
+}
+
+.programTable th, .programTable td {
+   text-align: center;   
+}
+
+.programTable .program {
+	width: 35%;
+}
+
+.programTable .game {
+	width: 25%;
+}
+
+.programTable .image {
+	width: 15%;
+}
+
+.programTable .clip {
+	width: 15%;
+}
+
+.programTable .status {
+	width: 10%;
+}
+
+.programTable .detail {
+	vertical-align: middle;
+}
+
+.programTable span {
+	font-size: 10px;
+	width: 80%;
+}
+
+.programTable button {
+	width: 40px;
+}
+
+.checktimeTable {
+	font-size: 11px;
+	width: 100%;
+	margin: 0 auto 15px;
+}
+
+.checktimeTable .program {
+	width: 30%;
+}
+
+.checktimeTable .type {
+	width: 40%;
+}
+
+.checktimeTable .time {
+	width: 30%;
+}
+
+.checktimeTable th, .checktimeTable td {
+   text-align: center;   
+}
+
+.downloadTable {
+	font-size: 11px;
+	width: 90%;
+	margin: 0 auto 15px;
+}
+
+.downloadTable .program {
+	width: 40%;
+}
+
+.downloadTable .download1 {
+	width: 30%;
+}
+
+.downloadTable .download2 {
+	width: 30%;
+}
+
+.downloadTable th, .downloadTable td {
+   text-align: center;   
+}
+
+.hwidTable {
+	font-size: 11px;
+	width: 100%;
+	margin: 0 auto 15px;
+}
+
+.hwidTable .program {
+	width: 30%;
+}
+
+.hwidTable .hwid {
+	width: 50%;
+}
+
+.hwidTable .lastActive {
+	width: 20%;
+}
+
+.hwidTable th, .hwidTable td {
+   text-align: center; 
+   vertical-align: middle;  
+}
+
+.transactionTable {
+	font-size: 11px;
+	width: 100%;
+	margin: 0 auto 15px;
+}
+
+.transactionTable th, .transactionTable td {
+   text-align: center;   
+}
+
+.formChangepw .controls {
+	margin-left: 170px;
+}
+
+.formChangepw .control-label {
+	width: 150px;
+}
+
+.formChangepw input {
+	font-size: 12px;
+	height: 15px;
+	width: 150px;
+	margin-top: 3px;
+}
+
+.panelHeading {
+	margin-top: -19px;
+	margin-left: -19px;
+	margin-bottom: 15px;
+	padding-top: 2px;
+	width: 120%;
+	height: 22px;
+	background: rgba(255, 255, 255, 0.1); 
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#0FFFFFFF, endColorstr=#0FFFFFFF);
+	font-size: 12px;
+}
+
+.panelHeading i {
+	margin-top: 0px;
+	margin-right: 2px;
+	margin-left: 2px;
+}
+
+.powered {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
