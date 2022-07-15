@@ -1,18 +1,22 @@
-<?php
-$con=mysqli_connect("localhost","webbot","u25v!7Ns0","webbot");
+<?
+$config = array(
+'host'=>"localhost",
+'user'=>"webbot",
+'pass'=>"u25v!7Ns0",
+'db'=>"webbot",
+'topup'=>"145141", //เลขบัญชี tmtopup
+'key'=>"1650200165723", //key ที่ตั้งค่าใน tmtopup
+'name'=>"Exp-Pro"
+);
 
-// Check connection
-if (mysqli_connect_errno()) {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  exit;
-}
+$cn =($GLOBALS["___mysqli_ston"] = mysqli_connect($config["host"], $config["user"], $config["pass"]));
+$db = mysqli_select_db($GLOBALS["___mysqli_ston"], $config["db"]);
+@mysqli_query($GLOBALS["___mysqli_ston"], "SET NAMES UTF8");
+if(!$cn&&!$db){die(mysqli_error($GLOBALS["___mysqli_ston"]));}
 
-echo "Initial character set is: " . mysqli_character_set_name($con);
 
-// Change character set to utf8
-mysqli_set_charset($con,"utf8");
+($GLOBALS["___mysqli_ston"] = mysqli_connect("localhost", "webbot", "u25v!7Ns0")) or die("Cannot connect the Server");   
+mysqli_select_db($GLOBALS["___mysqli_ston"], webbot) or die("Cannot select database");   
+mysqli_query($GLOBALS["___mysqli_ston"], "set character set utf8");   
 
-echo "Current character set is: " . mysqli_character_set_name($con);
-
-mysqli_close($con);
 ?>
