@@ -1,17 +1,17 @@
 <?
 $strSQL = "SELECT * FROM Download order by Programe";
-$objQuery = mysql_query($strSQL) or die ("Error Query [".$strSQL."]");
+$objQuery = $link->query($strSQL) or die ("Error Query [".$strSQL."]");
 ?>
 <?
-while($objResult = mysql_fetch_array($objQuery))
+while($objResult = mysqli_fetch_array($objQuery))
 {
-$resultq = mysql_query("select * from BuyItem where Programe='".$Bt."'") or die ("Err Can not to result");
-$objResult2 = mysql_fetch_array($resultq);
+$resultq = $link->query("select * from BuyItem where Programe='".$Bt."'") or die ("Err Can not to result");
+$objResult2 = mysqli_fetch_array($resultq);
 $Bt = $objResult["Programe"];
 ?>
 <?php
-$result = mysql_query("SELECT * FROM member WHERE UserID = '".$_SESSION['UserID']."' ") or die ("Err Can not to result");
-$dbarr = mysql_fetch_array($result) ;
+$result = $link->query("SELECT * FROM member WHERE UserID = '".$_SESSION['UserID']."' ") or die ("Err Can not to result");
+$dbarr = mysqli_fetch_array($result) ;
 $Programe = $dbarr[$objResult["Programe"]];
 
 if ($dbarr[$objResult["Programe"]] < 1) { 
