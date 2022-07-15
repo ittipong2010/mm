@@ -9,8 +9,57 @@ $config = array(
 'name'=>"Exp-Pro"
 );
 
-$con = mysqli_connect('108.61.99.51','webbot','Yn677q?p1');
-mysqli_select_db('webbot', $con)
+//ตัวอย่างไวยากรณ์การเชื่อมต่อฐานข้อมูลสำหรับ PHP และ MySQL
+
+	
+
+	//เชื่อมต่อกับฐานข้อมูล
+
+	
+
+	$hostname="your_hostname";
+
+	$username="webbot";
+
+	$password="Yn677q?p1";
+
+	$dbname="webbot";
+
+	$usertable="your_tablename";
+
+	$yourfield = "your_field";
+
+	
+
+	mysql_connect($hostname,$username, $password) หรือเสียหาย ("html>script language='JavaScript'>alert('ไม่สามารถเชื่อมต่อกับฐานข้อมูลได้! โปรดลองอีกครั้งในภายหลัง'),history.go(-1)/script>/html>");
+
+	mysqli_select_db($dbname);
+
+	
+
+	# ตรวจสอบว่ามีเรคคอร์ดอยู่หรือไม่
+
+	
+
+	$query = "SELECT * FROM $usertable";
+
+	
+
+	$result = mysqli_query($query);
+
+	
+
+	if($result){
+
+		while($row = mysqli_fetch_array($result)){
+
+			$name = $row["$yourfield"];
+
+			echo "Name: ".$name."br/>";
+
+		}
+
+	}
 
 $cn = mysqli_connect($config["host"],$config["user"],$config["pass"]);
 $db = mysqli_select_db($config["db"]);
