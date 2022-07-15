@@ -31,7 +31,7 @@ document.getElementById("overlay").style.display="none";
 <?php
 include('config.txt.php');
 //mysql_select_db($db);
-$result = mysqli_query("SELECT * FROM member WHERE UserID = '".$_SESSION['UserID']."' ") or die ("Err Can not to result");
+$result = mysqli_query("SELECT * FROM member WHERE UserID = '"00487"' ") or die ("Err Can not to result");
 $dbarr = mysqli_fetch_array($result);
 ?>
 
