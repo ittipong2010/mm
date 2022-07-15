@@ -125,9 +125,9 @@ text-align: center;
 if ($_POST["button"] == "เข้าสู่ระบบ")
 {
 $strSQL = "SELECT * FROM member WHERE Username = '".mysql_real_escape_string($_POST['username'])."' 
-	and Password = '".mysql_real_escape_string($_POST['password'])."'";
-	$objQuery = mysql_query($strSQL);
-	$objResult = mysql_fetch_array($objQuery);
+	and Password = '".mysqli_real_escape_string($_POST['password'])."'";
+	$objQuery = mysqli_query($link, $strSQL);
+	$objResult = mysqli_fetch_array($objQuery);
 	if(!$objResult)
 	{
 	 echo '<div class="alert alert-error" align="center"><b class="icon-remove icon-white"></b> ชื่อผู้ใช้หรือรหัสผิด</div>';
@@ -147,7 +147,7 @@ $strSQL = "SELECT * FROM member WHERE Username = '".mysql_real_escape_string($_P
 			
 			$_SESSION["UserID"] = $objResult["UserID"];			
 	}
-	mysql_close();
+	mysqli_close();
 ?>
 
 <? } ?>
