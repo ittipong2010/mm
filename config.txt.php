@@ -6,7 +6,7 @@ error_reporting(0); // disable PHP errors, you can comment out or turn on logs i
 
 server with default setting (user 'root' with no password) */
 
-$link = mysqli_connect("localhost", "ittipong", "0a1_9gPh", "main");
+$link = mysqli_connect("localhost", "webbot", "u25v!7Ns0", "webbot");
 
 // Check connection status
 
@@ -14,18 +14,3 @@ if ($link === false) {
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 
-$logwebhook = ""; // discord webhook which receives login logs and keys created
-
-$adminwebhook = ""; // discord webhook which receives admin actions
-
-$webhookun = "KeyAuth Logs"; // webhook username
-
-$adminwebhookun = "KeyAuth Admin Logs"; // admin webhook's username
-
-$adminapikey = ""; // api key for api/admin (an api only my staff can use)
-
-$shoppyAPIkey = ""; // shoppy.gg API key for my staff to look up orders
-
-$proxycheckapikey = ""; // proxycheck.io API key to check if IP is considered a VPN
-
-$bunnyNetKey = ""; // bunny.net CDN used for custom domains
