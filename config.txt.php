@@ -9,6 +9,8 @@ $config = array(
 'name'=>"Exp-Pro"
 );
 
+$con = mysqli_connect('108.61.99.51','webbot','Yn677q?p1');
+
 $cn = mysqli_connect($config["host"],$config["user"],$config["pass"]);
 $db = mysqli_select_db($config["db"]);
 @mysqli_query("SET NAMES UTF8");
