@@ -1,10 +1,10 @@
 ﻿<?php
 include("config.txt.php");
 $strSQL = "SELECT * FROM Setting order by WebName";
-$objQuery = mysql_query($strSQL) or die ("Error Query [".$strSQL."]");
+$objQuery = $link->query($strSQL) or die ("Error Query [".$strSQL."]");
 ?>
 <?
-while($objResult = mysql_fetch_array($objQuery))
+while($objResult = mysqli_fetch_array($objQuery))
 {
 $footer = $objResult["footer"];
 $footer_link = $objResult["footer_link"];
