@@ -10,6 +10,7 @@ $config = array(
 );
 
 $con = mysqli_connect('108.61.99.51','webbot','Yn677q?p1');
+mysqli_select_db('webbot', $con)
 
 $cn = mysqli_connect($config["host"],$config["user"],$config["pass"]);
 $db = mysqli_select_db($config["db"]);
