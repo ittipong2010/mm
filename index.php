@@ -3,7 +3,7 @@
 include("class.php");
 include("time.php");
 include("config.txt.php");
-mysql_select_db($db);
+$mysqli->select_db(webbot);
 $str_sql = "Select * From history WHERE UserID = '".$_SESSION['UserID']."'";
 $rs_student = mysql_query($str_sql);
 	
@@ -13,7 +13,7 @@ $rs_Status = mysql_query($str_Status);
 $strSQL = "SELECT * FROM Download order by id_download";
 $objQuery = mysql_query($strSQL) or die ("Error Query [".$strSQL."]");
 
-mysql_select_db($db);
+$mysqli->select_db($db);
 $result = mysql_query("SELECT * FROM member WHERE UserID = '".$_SESSION['UserID']."' ") or die ("Err Can not to result");
 $dbarr = mysql_fetch_array($result);
 ?>
