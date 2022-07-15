@@ -13,7 +13,7 @@
 
 	$username="webbot";
 
-	$password="Yn677q?p1";
+	$password="u25v!7Ns0";
 
 	$dbname="webbot";
 
