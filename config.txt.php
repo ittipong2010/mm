@@ -1,25 +1,41 @@
 <?php
 
-$con=mysqli_connect("localhost","webbot","u25v!7Ns0","webbot");
+  $hostname="localhost";
 
-// Check connection
+	$username="webbot";
 
-if (mysqli_connect_errno()) {
+	$password="u25v!7Ns0";
 
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	$dbname="webbot";
 
-  exit;
+	$usertable="member";
 
-}
+	$yourfield = "Username";
 
-echo "Initial character set is: " . mysqli_character_set_name($con);
+	
 
-// Change character set to utf8
+	mysql_connect($hostname,$username, $password) หรือเสียหาย ("html>script language='JavaScript'>alert('ไม่สามารถเชื่อมต่อกับฐานข้อมูลได้! โปรดลองอีกครั้งในภายหลัง'),history.go(-1)/script>/html>");
 
-mysqli_set_charset($con,"utf8");
+	mysqli_select_db($dbname);
 
-echo "Current character set is: " . mysqli_character_set_name($con);
+$query = "SELECT * FROM $usertable";
 
-mysqli_close($con);
+	
+
+	$result = mysqli_query($query);
+
+	
+
+	if($result){
+
+		while($row = mysqli_fetch_array($result)){
+
+			$name = $row["$yourfield"];
+
+			echo "Name: ".$name."br/>";
+
+		}
+
+	}
 
 ?>
