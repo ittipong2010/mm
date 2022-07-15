@@ -1,9 +1,9 @@
-?php
+
 
 
 //ตัวอย่างไวยากรณ์การเชื่อมต่อฐานข้อมูลสำหรับ PHP และ MySQL
 
-	
+
 
 	//เชื่อมต่อกับฐานข้อมูล
 
@@ -27,33 +27,42 @@
 
 	mysqli_select_db($dbname);
 
-	
+	;
 
-	# ตรวจสอบว่ามีเรคคอร์ดอยู่หรือไม่
-
-	
-
-	$query = "SELECT * FROM $usertable";
-
-	
-
-	$result = mysqli_query($query);
-
-	
-
-	if($result){
-
-		while($row = mysqli_fetch_array($result)){
-
-			$name = $row["$yourfield"];
-
-			echo "Name: ".$name."br/>";
+	>";
 
 		}
 
-	}
+	
 
 
 
    
+
+
+
+<?php
+
+$con=mysqli_connect("localhost","webbot","u25v!7Ns0","webbot");
+
+// Check connection
+
+if (mysqli_connect_errno()) {
+
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+
+  exit;
+
+}
+
+echo "Initial character set is: " . mysqli_character_set_name($con);
+
+// Change character set to utf8
+
+mysqli_set_charset($con,"utf8");
+
+echo "Current character set is: " . mysqli_character_set_name($con);
+
+mysqli_close($con);
+
 ?>
