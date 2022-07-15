@@ -17,9 +17,9 @@
 
 	$dbname="webbot";
 
-	$usertable="SET NAMES UTF8";
+	$usertable="SET member UTF8";
 
-	$yourfield = "your_field";
+	$yourfield = "Username";
 
 	
 
