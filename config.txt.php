@@ -1,4 +1,4 @@
-﻿<?
+<?
 
 
 //ตัวอย่างไวยากรณ์การเชื่อมต่อฐานข้อมูลสำหรับ PHP และ MySQL
@@ -55,7 +55,5 @@
 
 
 
-//mysqli_connect("108.61.99.51","webbot","Yn677q?p1") or die("Cannot connect the Server");   
-//mysqli_select_db("webbot") or die("Cannot select database");   
-//mysqli_query("set character set utf8");   
+   
 ?>
