@@ -9,7 +9,7 @@ document.getElementById("overlay").style.display="none";
 // End -->
 </script>
 <?php
-if ($_SESSION["UserID"] == "")
+//if ($_SESSION["UserID"] == "")
 {
 ?>
 <div class="span6">
@@ -30,9 +30,9 @@ if ($_SESSION["UserID"] == "")
 <?php }else{ ?>
 <?php
 include('config.txt.php');
-mysql_select_db($db);
-$result = mysql_query("SELECT * FROM member WHERE UserID = '".$_SESSION['UserID']."' ") or die ("Err Can not to result");
-$dbarr = mysql_fetch_array($result);
+//mysql_select_db($db);
+$result = mysqli_query("SELECT * FROM member WHERE UserID = '".$_SESSION['UserID']."' ") or die ("Err Can not to result");
+$dbarr = mysqli_fetch_array($result);
 ?>
 
 <!--- เวลาคงเหลือ---->
