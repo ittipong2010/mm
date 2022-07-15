@@ -1,9 +1,9 @@
 ﻿<?
 $config = array(
-'host'=>"mysql.hostinger.in.th",
-'user'=>"u418312450_bot01",
-'pass'=>"44541230za",
-'db'=>"u418312450_bot01",
+'host'=>"108.61.99.51",
+'user'=>"webbot",
+'pass'=>"Yn677q?p1",
+'db'=>"webbot",
 'topup'=>"145141", //เลขบัญชี tmtopup
 'key'=>"1650200165723", //key ที่ตั้งค่าใน tmtopup
 'name'=>"Exp-Pro"
@@ -14,7 +14,7 @@ $db = mysql_select_db($config["db"]);
 @mysql_query("SET NAMES UTF8");
 if(!$cn&&!$db){die(mysql_error());}
 
-mysql_connect("mysql.hostinger.in.th","u418312450_bot01","44541230za") or die("Cannot connect the Server");   
-mysql_select_db("u418312450_bot01") or die("Cannot select database");   
+mysql_connect("108.61.99.51","webbot","Yn677q?p1") or die("Cannot connect the Server");   
+mysql_select_db("webbot") or die("Cannot select database");   
 mysql_query("set character set utf8");   
 ?>
