@@ -3,17 +3,18 @@
 include("class.php");
 include("time.php");
 include("config.txt.php");
+//mysql_select_db($db);
 $str_sql = "Select * From history WHERE UserID = '".$_SESSION['UserID']."'";
-$rs_student = $link->query($str_sql);
+$rs_student = mysqli_query($link, $str_sql);
 	
 $str_Status = "Select * From status";
-$rs_Status = $link->query($str_Status);
+$rs_Status = mysqli_query($link, $str_Status);
 
 $strSQL = "SELECT * FROM Download order by id_download";
-$objQuery = $link->query($strSQL) or die ("Error Query [".$strSQL."]");
+$objQuery = mysqli_query($link, $strSQL) or die ("Error Query [".$strSQL."]");
 
-
-$result = $link->query("SELECT * FROM member WHERE UserID = '".$_SESSION['UserID']."' ") or die ("Err Can not to result");
+//mysql_select_db($db);
+$result = mysqli_query($link, "SELECT * FROM member WHERE UserID = '".$_SESSION['UserID']."' ") or die ("Err Can not to result");
 $dbarr = mysqli_fetch_array($result);
 ?>
 <?php
@@ -123,10 +124,10 @@ text-align: center;
 <? //ทำงานหน้า  ?login=0
 if ($_POST["button"] == "เข้าสู่ระบบ")
 {
-$strSQL = "SELECT * FROM member WHERE Username = '".mysqli_real_escape_string($_POST['username'])."' 
-	and Password = '".mysqli_real_escape_string($_POST['password'])."'";
-	$objQuery = $link->query($strSQL);
-	$objResult = mysqli_fetch_array($objQuery);
+$strSQL = "SELECT * FROM member WHERE Username = '".mysql_real_escape_string($_POST['username'])."' 
+	and Password = '".mysql_real_escape_string($_POST['password'])."'";
+	$objQuery = mysql_query($strSQL);
+	$objResult = mysql_fetch_array($objQuery);
 	if(!$objResult)
 	{
 	 echo '<div class="alert alert-error" align="center"><b class="icon-remove icon-white"></b> ชื่อผู้ใช้หรือรหัสผิด</div>';
@@ -141,12 +142,12 @@ $strSQL = "SELECT * FROM member WHERE Username = '".mysqli_real_escape_string($_
 			session_write_close();
 						
 			$strSQL2 = "SELECT * FROM member WHERE UserID = '".$_SESSION['UserID']."' ";
-			$objQuery2 = $link->query($strSQL2);
-			$objResult2 = mysqli_fetch_array($objQuery2);
+			$objQuery2 = mysql_query($strSQL2);
+			$objResult2 = mysql_fetch_array($objQuery2);
 			
 			$_SESSION["UserID"] = $objResult["UserID"];			
 	}
-	mysqli_close();
+	mysql_close();
 ?>
 
 <? } ?>
@@ -527,8 +528,8 @@ $Bt = $objResult["Programe"];
 $Point = $objResult["Point"];
 $Day = $objResult["Day"];
 
-$resultq = $link->query("select * from BuyItem where Programe='".$Bt."'") or die ("Err Can not to result");
-$objResult2 = mysqli_fetch_array($resultq);
+$resultq = mysql_query("select * from BuyItem where Programe='".$Bt."'") or die ("Err Can not to result");
+$objResult2 = mysql_fetch_array($resultq);
 
 if($objResult['Status'] == "Online")
 {
