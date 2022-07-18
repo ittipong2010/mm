@@ -59,7 +59,7 @@ $testdate = date("d-m-Y H:i:s");
     	  <?
 
 $strSQL7 = "SELECT * FROM Download order by id_download";
-$objQuery7 = mysql_query($strSQL7) or die ("Error Query [".$strSQL7."]");
+$objQuery7 = mysqli_query($strSQL7) or die ("Error Query [".$strSQL7."]");
 ?>
   <table width="450" border="0" align="center" cellpadding="0" cellspacing="0" class="table table-striped table-bordered">
  <thead>
@@ -69,14 +69,14 @@ $objQuery7 = mysql_query($strSQL7) or die ("Error Query [".$strSQL7."]");
         <th width="36%"><div align="center" class="style3">เวลาที่เหลือ</div></th>
       </tr>
 	  		<?
-while($objResult7 = mysql_fetch_array($objQuery7))
+while($objResult7 = mysqli_fetch_array($objQuery7))
 {
 $Bt7 = $objResult7["Programe"];
 $Point7 = $objResult7["Point"];
 $Day7 = $objResult7["Day"];
 
-$resultq7 = mysql_query("select * from BuyItem where Programe='".$Bt."'") or die ("Err Can not to result");
-$objResult27 = mysql_fetch_array($resultq7);
+$resultq7 = mysqli_query("select * from BuyItem where Programe='".$Bt."'") or die ("Err Can not to result");
+$objResult27 = mysqli_fetch_array($resultq7);
 ?>
       <tr>
 <?php
