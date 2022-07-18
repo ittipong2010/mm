@@ -129,10 +129,7 @@ $strSQL = "SELECT * FROM member WHERE Username = '".mysql_real_escape_string($_P
 	$objQuery = mysqli_query($link, $strSQL);
 	$objResult = mysqli_fetch_array($objQuery);
 	if(!$objResult)
-	{
-	 echo '<div class="alert alert-error" align="center"><b class="icon-remove icon-white"></b> ชื่อผู้ใช้หรือรหัสผิด</div>';
-	 print "<meta http-equiv=refresh content=1;URL=./?p=home>";
-	}
+	
 	else
 	{
 		   echo '<div>';
