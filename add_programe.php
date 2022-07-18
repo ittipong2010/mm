@@ -60,7 +60,7 @@ $strSQL = "INSERT INTO BuyItem ";
 $strSQL .="(Programe,Point,Day) ";
 $strSQL .="VALUES ";
 $strSQL .="('".$_POST["Programe"]."','".$_POST["Point"]."','".$_POST["Day"]."' ) ";
-$objQuery = mysql_query($strSQL);
+$objQuery = mysqli_query($strSQL);
 if($objQuery)
 {
 echo '<div class="alert alert-success" align="center">เพิ่มโปรใหม่เรียบร้อยแล้ว</div>';
@@ -76,7 +76,7 @@ $strSQL1 = "INSERT INTO Download ";
 $strSQL1 .="(Programe,link,link2,Status,Name,Version,Function,Picture,Clip) ";
 $strSQL1 .="VALUES ";
 $strSQL1 .="('".$_POST["Programe"]."','".$_POST["link1"]."','".$_POST["link2"]."','".$_POST["Status"]."','".$_POST["Name"]."','".$_POST["Version"]."','".$_POST["Function"]."','".$_POST["Picture"]."','".$_POST["Clip"]."' ) ";
-$objQuery1 = mysql_query($strSQL1);
+$objQuery1 = mysqli_query($strSQL1);
 if($objQuery1)
 {
 
@@ -93,7 +93,7 @@ $strSQL = "INSERT INTO BuyItem ";
 $strSQL .="(Programe,Point,Day) ";
 $strSQL .="VALUES ";
 $strSQL .="('".$_POST["Programe1"]."','".$_POST["Point1"]."','".$_POST["Day1"]."' ) ";
-$objQuery = mysql_query($strSQL);
+$objQuery = mysqli_query($strSQL);
 if($objQuery)
 {
 echo '<div class="alert alert-success" align="center">เพิ่มโปรใหม่เรียบร้อยแล้ว</div>';
